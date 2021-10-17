@@ -1,0 +1,275 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 50px 0 0;
+}
+
+h1 {
+  font-size: 85px;
+  font-weight: 300;
+  margin: 40px 0 90px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.4;
+}
+
+.result {
+  display: none;
+  padding: 30px 0;
+  background-color: whitesmoke;
+}
+
+.result span {
+  display: block;
+  font-weight: 300;
+  text-align: center;
+  font-size: 150px;
+  color: dodgerblue;
+  opacity: 0.7;
+}
+
+.quiz {
+  padding: 60px 25px;
+  background-color: dodgerblue;
+}
+
+.quiz form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.question {
+  margin: 30px 0 60px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  margin: 10px 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.option input {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  margin-left: 10px;
+  height: 23px;
+  width: 23px;
+}
+
+.checkmark {
+  display: block;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+}
+
+.checkmark {
+  background-color: white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+}
+
+.option .checkmark:after {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #FFC400;
+  top: 5px;
+  left: 5px;
+  transition: .5s all cubic-bezier(0,.26,.18,1.88);
+  transform: scale(0);
+}
+
+.activeRadio .checkmark:after
+{
+  transform: scale(1);
+  visibility: visible;
+  border-radius: 100%;
+}
+
+.option label {
+  color: white;
+  opacity: 0.7;
+  font-size: 18px;
+  padding: 10px 0;
+  padding-left: 20px;
+  cursor: pointer;
+  width: 355px;
+}
+
+.submitBtn,
+.resetBtn {
+  margin-top: 20px;
+  font-family: roboto;
+  font-size: 16px;
+  padding: 20px 40px;
+  border: 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+}
+
+.submitBtn {
+  background-color: #4AC948;
+}
+
+.resetBtn {
+  background-color: #FF4500;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 80px;
+    margin-bottom: 70px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .quiz {
+    padding: 40px 25px;
+  }
+
+  .question {
+    margin-bottom: 40px;
+  }
+
+  .submitBtn, .resetBtn {
+    margin-top: 10px;
+  }
+
+  .result span {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 75px;
+    margin-bottom: 65px;
+  }
+
+  .option label {
+    width: 235px;
+  }
+
+  .result span {
+    font-size: 115px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 35px;
+  }
+
+  h1 {
+    font-size: 62px;
+    margin-bottom: 55px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .option label {
+    font-size: 17px;
+    width: 150px;
+  }
+
+  .result span {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: 46px;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .option label {
+    font-size: 16px;
+  }
+
+  .option {
+    margin: 5px 15px;
+  }
+
+  .checkmark {
+    height: 21px;
+    width: 21px;
+  }
+
+  .option .checkmark:after {
+    top: 4px;
+    left: 4px;
+  }
+
+  .quiz {
+    padding-top: 30px;
+  }
+
+  .question {
+    margin: 25px 0;
+  } 
+
+  .result span {
+    font-size: 75px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .quiz {
+    padding: 10px 20px 35px;
+  }
+
+  .resetBtn {
+    margin-left: 25px;
+  }
+
+  .result span {
+    font-size: 60px;
+  }
+}
